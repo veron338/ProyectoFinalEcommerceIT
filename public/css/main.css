@@ -1,0 +1,572 @@
+body {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+h2{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: silver;
+    margin-bottom: 10px;
+}
+
+
+#menu {
+    display: none;
+}
+.menu-toggle {
+    display: none;
+}
+
+/* Card Header H1 style*/
+.section-cards__header h1 {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: silver;
+}
+
+/* Card Header P style*/
+.section-cards__header p {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: silver;
+}
+
+/* Card Container Style*/
+.cards-container {
+    width: 100%;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0%;
+}
+
+.cards-container .card {
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow:  0 2px 2px rgba(247, 247, 247, 0.2);
+    overflow: hidden;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.cards-container .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.cards-container .card .card__image {
+    width: 330px;
+    height: 220px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Menu Desplegable */
+
+.menu-toggle__label {
+	display: inline-block;
+	width:30px;
+	height: 20px;
+	position: relative;
+	z-index: 2;
+}
+ 
+.menu-toggle__label span{
+	width: 100%;
+	height: 4px;
+	border-radius: 4px;
+	display: block;
+	position: absolute;
+	background: #fff;
+	transition: all 0.25s ease;
+	transform-origin : 0px 100%;
+}
+ 
+.menu-toggle__label span:nth-child(2){
+	top: calc(50% - 2px);
+}
+ 
+.menu-toggle__label span:nth-child(3){
+bottom: 0;
+}
+
+/* Header Style */
+
+.main-header{
+    width: 100%;
+    overflow: hidden;
+    background:  #333;
+    margin-bottom: 20px;
+    padding: 0.2px;
+    text-align: center;
+}
+
+/* /* Colocacion Logo en Header */
+/* .main-header .search-bar__logo-container {
+    color: #f2f2f2;
+    font-size: 30px;
+    float: left;
+    padding-top: 30px;
+    padding-left: 10px;
+
+} */
+
+.nav-bar__nav-list{
+    width: 100%;
+    overflow: hidden;
+    background:  #333;
+    margin-bottom: -15px;
+    padding: 0.2px;
+    text-align: center;
+}
+
+
+
+.logo_header{
+    padding: 0;
+    margin: 0;
+} 
+
+/* Colocacion Desplegable en Header */
+.main-header .menu-toggle__label {
+    float: left;
+    line-height: 100px;
+}
+.main-header .menu-toggle__label a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Colocacion Barra de Busqueda en Header */
+.main-header .search-bar__form-container {
+    float: right;
+    line-height: 100px;
+}
+
+.main-header .search-bar__form-container a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Nav-Bar -Todo el menu en linea- */
+.nav-bar__nav-item {
+    display: inline-block;
+}
+
+/* Colocacion Barra de Navegacion en Header  */
+.main-header nav {
+    float: right;
+    line-height: 100px;
+}
+
+.main-header nav a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-header nav a:hover {
+    background:  #f56f3a;
+    border-radius: 50px;
+}
+
+/* Colocacion Barra de Navegacion en Header  */
+.main-header .search-bar__carrito-container {
+    float: center;
+    line-height: 100px;
+    padding-top: 10px;
+}
+
+.main-header .search-bar__carrito-container a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 10px 20px;
+    padding-top: 50px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*  */
+.search-bar__carrito-container{
+    color: white;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.search-bar__form-container {
+    color: white;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+/* Responsive Nav-Bar */
+@media (max-width: 1000px){
+
+    .main-header .menu-toggle {
+       
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        padding-top: 43px;
+        padding-left: 10px;
+      }
+
+     .search-bar__form-container {
+        position: absolute;
+        left: 70px;
+        padding-left: 10px;    }
+
+    .search-bar__carrito-container {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 35px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    nav {
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background: #111;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0% at center);
+        transition: clip-path 1s ease-in-out;
+    }
+    
+    .main-header #menu:checked + nav {
+        clip-path: circle(100% at center);        
+    }
+}
+
+
+
+
+
+
+/* Card Style H3 and P  */
+.card__heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: silver;
+}
+
+.card__description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: silver;
+}
+
+.section-cards__header p {
+    visibility: hidden;
+}
+
+
+
+/* CARRITO ---------------------------------------------- */
+
+#cartList{
+    height: 350px;
+    width: 450px;
+    padding: 24px;
+    border-radius: 24px;
+
+    position: fixed;
+    top: 64px;
+    right: 80px;
+    z-index: 900;
+
+    background-color: #434343;
+    color: white;
+
+    transform: top;
+    transform: scaleY(0);
+}
+
+#cartList.show{
+    transform: scaleY(1);
+}
+
+#cartList .closeBtn{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+}
+
+#cartList .headers,
+#cartList .productItem{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 2fr 1fr 1fr;
+}
+#cartList .headers{
+    font-weight: bold;
+}
+#cartList .productItem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+#cartList .total{
+    width: 100%;
+    padding: 16px 0;
+    border-top: #B09393 1px solid;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: inherit;
+}
+
+.addCartBtn{
+    width: 50%;
+    height: 32px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: #445377;
+
+}
+/*Formulario ALTA*/
+
+
+.in:valid {
+    outline: solid 2px green;
+  }
+  
+  .in:invalid {
+    outline: solid 2px rgb(180, 49, 49);
+  }
+  
+  #section-alta form {
+    width: 500px;
+    margin: auto;
+    padding: 35px 45px;
+    border-radius: 45px;
+    background: #445;
+    
+    box-shadow: 0px 0px 25px 8px rgba(0, 0, 0, 0.7);
+  }
+  #section-alta form .field {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  #section-alta form .field label {
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+  #section-alta form .field :nth-child(2) {
+    height: 30px;
+    padding: 0 8px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.7);
+  }
+  #section-alta form .field :nth-child(2)::placeholder {
+    color: red;
+  }
+  #section-alta form .errMsg {
+    font-weight: bold;
+    color: rgb(180, 49, 49);
+  }
+  #section-alta form button[type=submit] {
+    width: 100%;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: #384562;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.7);
+  }
+  
+  
+  #section-alta form {
+      width: 500px;
+      margin: auto;
+      padding: 35px 45px;
+      border-radius: 45px;
+      background: white;
+      background: #384562 ;
+      
+      box-shadow: 0px 0px 25px 8px rgba(0, 0, 0, 0.7);
+  
+  
+      transition-property: transform, box-shadow;
+      transition-duration: .1s;
+  
+    }
+  
+    #section-alta form:active{
+  
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+        transform: translate(15px, 12px);
+  
+    }
+
+/*Formulario contacto */
+
+.in:valid {
+    outline: solid 2px green;
+  }
+  
+  .in:invalid {
+    outline: solid 2px rgb(180, 49, 49);
+  }
+  
+  #section-contacto form {
+    width: 500px;
+    margin: auto;
+    padding: 35px 45px;
+    border-radius: 45px;
+    background-color:#384562;
+    
+    box-shadow: 0px 0px 25px 8px rgba(0, 0, 0, 0.7);
+  }
+  #section-contacto form .field {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  #section-contacto form .field label {
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+  #section-contacto form .field :nth-child(2) {
+    height: 32px;
+    padding: 0 8px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.7);
+  }
+  #section-contacto form .field :nth-child(2)::placeholder {
+    color: red;
+  }
+  #section-contacto form .errMsg {
+    font-weight: bold;
+    color: rgb(180, 49, 49);
+  }
+  #section-contacto form button[type=submit] {
+    width: 100%;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: #384562;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.7);
+  }
+  
+  
+  #section-contacto form {
+      width: 500px;
+      margin: auto;
+      padding: 35px 45px;
+      border-radius: 45px;
+      background: #384562 ;
+      
+      box-shadow: 0px 0px 25px 8px rgba(0, 0, 0, 0.7);
+  
+  
+      transition-property: transform, box-shadow;
+      transition-duration: .1s;
+  
+    }
+  
+    #section-contacto form:active{
+  
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+        transform: translate(15px, 12px);
+  
+    }
+  .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        text-align: center;
+    }
+
+
+ /*ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    }
+    
+li {
+float: left;
+}
+    
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 20px 26px;
+text-decoration: none;
+font-size: 25px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+    
+/* Change the link color to #111 (black) on hover */
+/*li a:hover {
+background-color: #111;
+} */

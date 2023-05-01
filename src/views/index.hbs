@@ -1,0 +1,93 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src=" ./JS/main.mjs " type="module"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+        <header class="main-header">
+        <input type="checkbox" id="menu">
+        <nav class="nav-bar">
+        <ul class="nav-bar__nav-list">
+            <li class="nav-bar__nav-item">
+                <a><img src="img/logo/svg-2.svg" class="logo_header" alt="LogoTieda" width="30" height="30" ></a>
+            </li>
+            <li class="nav-bar__nav-item">
+                <a to="/inicio" href="index.html"><img src="img/logo/header_inicio.png" class="logo_header" alt="LogoTieda" width="50" height="30" ></a>
+            </li>
+            <li class="nav-bar__nav-item">
+                <a to="/alta" href="views/alta.html"><img src="img/logo/alta_header.png" class="logo_header" alt="LogoTieda" width="50" height="30" ></a>
+            </li>
+            <li class="nav-bar__nav-item">
+                <a to="/contacto" href="views/"><img src="img/logo/contacto_header.png" class="logo_header" alt="LogoTieda" width="50" height="30" ></a>
+            </li>
+            <li class="nav-bar__nav-item" >
+                <a><span id="cartBtn"><img src="img/logo/carrito-compra.svg" alt="logo" width="50" height="30"></span></a>
+            </li>
+
+        </ul>
+    </nav>
+
+          <div id="cartList">
+                    
+                   
+          </div>
+    <div class="search-bar">
+    
+        <div class="menu-toggle">
+            <label class="menu-toggle__label" for="menu">
+                <span class="menu-toggle__pan-arriba"></span>
+                <span class="menu-toggle__medallon"></span>
+                <span class="menu-toggle__pan-abajo"></span>
+            </label>
+    </div>
+    </div>
+
+    </header>
+
+   {{!--  <header class="main-header">
+        <ul>
+            <li>
+                <a><img src="img/logo/svg-2.svg" class="logo_header" alt="LogoTieda" width="30" height="30" ></a>
+            </li>
+            <li>
+                <a to="/inicio" href="index.html">Inicio</a>
+            </li>
+            <li>
+                <a to="/alta" href="views/alta.html">Alta</a>
+            </li>
+            <li>
+                <a to="/contacto" href="views/contacto.html">Contacto</a>
+                </li>
+            <li style="float: right;">
+                <a><span id="cartBtn"><img src="img/logo/carrito-compra.svg" alt="logo" width="30" height="30"></span></a>
+            </li>
+
+        </ul>
+
+          <div id="cartList">
+                    
+                   
+          </div>
+
+    </header> --}}
+    <main>
+    </main>
+    <footer> 
+        <div class="footer">
+                <a class="nav-bar__nav-link" to="/inicio" href="index.html">Inicio</a>
+                <a class="nav-bar__nav-link" to="/contacto" href="views/contacto.html">Contacto</a>
+                <a class="nav-bar__nav-link" to="/alta" href="views/alta.html">Alta</a>
+          </div>
+    </footer>
+<script type="module">
+    history.pushState(null, null,'{{url}}')
+</script>
+</body>
+</html>
